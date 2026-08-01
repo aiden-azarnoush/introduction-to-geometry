@@ -1,0 +1,187 @@
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen} %intersing
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}   %default
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver} %https://www.overleaf.com/project/5d747c71ac3a15000125da4f
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+% These are my colors -- there are many like them, but these ones are mine.
+% \definecolor{blue}{RGB}{0,114,178}
+% \definecolor{red}{RGB}{213,94,0}
+% \definecolor{yellow}{RGB}{240,228,66}
+% \definecolor{green}{RGB}{0,158,115}
+
+\usepackage{multicol}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{amsmath, amssymb, amsthm, array,xfrac, mathrsfs}
+\usefonttheme[onlymath]{serif} % To make math cursive
+\usepackage{gensymb}
+\usepackage{physics} % for partial and derivative
+\usepackage[tikz]{mdframed}
+\usetikzlibrary{decorations.pathreplacing,angles,quotes, fadings}
+\usetikzlibrary{trees,positioning,arrows,fit,shapes,calc}
+% Draw cross or circle in tikz environment
+\usetikzlibrary{shapes.misc}
+%\usepackage[shortlabels]{enumitem}
+\usepackage{empheq}
+\usepackage[makeroom]{cancel}
+% Clickable Links
+\usepackage{hyperref}
+\usepackage{siunitx}
+\usepackage{venndiagram}
+% CAPTION
+\usepackage{caption}
+\captionsetup{justification=centering}
+\usepackage{epigraph}
+\usepackage{tikz,tikz-3dplot} 
+\usepackage{fouriernc}
+
+\usepackage{pgfpages}
+%\pgfpagesuselayout{resize to}[a4paper,landscape] %To rescale to A4
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EXAMPLE COUNTING
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{theorem}[ams style]
+\setbeamertemplate{theorems}[numbered]
+\makeatletter
+\def\@firstoffive#1#2#3#4#5{#1}%
+\newenvironment{example*}[1][\relax]
+  {\begingroup\ifx#1\relax% No optional argument
+   \else% Optional argument given
+     \@ifundefined{r@#1}{}{%
+       \protected@edef\cont@example@num{\csname r@#1\endcsname}%
+       \expandafter\edef\expandafter\cont@example@num\expandafter
+         {\expandafter\@firstoffive\cont@example@num}%%
+       \renewcommand{\thetheorem}{\cont@example@num}}%
+   \fi\addtocounter{theorem}{-1}% Revert to previous theorem count
+   \example}
+  {\endexample\endgroup}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% UPPER CASE TITLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage{textcase,regexpatch}
+
+% \setbeamertemplate{frametitle}{
+%   \makeatletter
+%   \regexpatchcmd{\insertframetitle}
+%     {(\c{usebeamertemplate}.*)\c{fi}}
+%     {\c{NoCaseChange}\cB\{\1\cE\}\c{fi}}
+%     {}{}%
+%   \makeatother
+%   \MakeTextUppercase{\insertframetitle}
+% }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% REMOVING PART I, II in \partpart
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{part page}{
+        \begin{beamercolorbox}[sep=8pt,center,wd=\textwidth]{part title}
+            \usebeamerfont{part title}\insertpart\par
+        \end{beamercolorbox}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RESET TOC NUMBERING FOR EACH PART
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\AtBeginPart{%
+  \beamer@tocsectionnumber=0\relax
+  \setcounter{section}{0}
+  %\frame{\partpage}%
+}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CHANGE FIGURE CAPTION NAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\figurename}{Fig.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TRANSITION FRAME FOR PARTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Change the bg color to adjust your transition slide background color!
+\newenvironment{transitionframe}{
+\usebackgroundtemplate{%
+\tikz[overlay,remember picture] \node[at=(current page.center)] {\includegraphics[height=\paperheight,width=\paperwidth]{background/bg.jpg}};
+}
+\setbeamertemplate{footline}{}
+\begin{frame}}{\end{frame}
+%\usebackgroundtemplate{ }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% X mark
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{pifont}
+\newcommand{\xmark}{\text{\ding{55}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%           TRUE or FALSE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\true}{\alert{\textbf{T}}}
+\newcommand{\false}{\alert{\textbf{F}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Coloring a row
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{colortbl}
+\definecolor{Gray}{gray}{0.9}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{LightBlue}{rgb}{173,216,230}
+\definecolor{Amethyst}{rgb}{0.6, 0.4, 0.8}
+\usepackage[first=0,last=9]{lcg}
+\newcommand{\ra}{\rand0.\arabic{rand}}
