@@ -1,6 +1,6 @@
 # Introduction to Geometry
 
-Beamer lecture slides for an introductory geometry course, originally taught at St. Petersburg College (Fall 2021). The deck runs about 109 slides across four parts, with figures drawn in TikZ and worked examples throughout.
+Beamer lecture slides for an introductory geometry course, originally taught at St. Petersburg College (Fall 2021). The deck runs about 109 slides across four parts, with figures drawn in TikZ and worked examples throughout. **[View the compiled slides (PDF)](introduction_to_geometry_Aiden_Azarnoush.pdf)** — no LaTeX required.
 
 ## Contents
 
