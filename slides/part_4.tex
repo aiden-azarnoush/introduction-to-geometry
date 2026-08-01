@@ -1,0 +1,668 @@
+% PART 4 (SECTION 8.4)
+\part{Section 8.4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{transitionframe}
+    \begin{center}
+    { 
+        \Huge \textcolor{white}{\textbf{Volume and Surface Area}}
+        \\[-1em]
+        \noindent\textcolor{white}{\rule{12cm}{0.4pt}}
+        
+        %\large \textcolor{white}{Section 8.4}
+    }
+    \end{center}
+\end{transitionframe}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Outline}
+    \begin{columns}[t]
+        \begin{column}{.5\textwidth}
+            \tableofcontents[part=4, sections={1-2}]
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \tableofcontents[part=4, sections={3-4}]
+        \end{column}
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Polyhedra}
+\subsection{What is Polyhedra?}
+\begin{frame}{Polyhedra}
+    \begin{itemize}
+        \item A polyhedron (plural polyhedra) is closed figure formed by a number of polygons.
+    \end{itemize}
+    %
+    \begin{block}{Definition}
+        A polyhedron must meet 3 conditions:
+        \begin{itemize}
+            \item closed figure
+            \item created by straight lines only
+            \item 3-Dimensional object
+        \end{itemize}
+    \end{block}
+    %
+    \begin{figure}[H]
+        \centering
+        \input{Tikz/polyhedra}
+    \end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Faces, Vertices, and Edges}
+\begin{frame}{Faces, Vertices, and Edges}
+    \begin{itemize}
+        \item \textbf{Face}: Each flat surface (or each polygon).
+        \item \textbf{Vertex}: Corners of faces.
+        \item \textbf{Edge}: A line segment between two faces.
+    \end{itemize}
+    %
+    \begin{figure}[H]
+        \centering
+        \input{Tikz/faces_edges}
+    \end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Euler's Polyhedron Formula}
+\begin{frame}[t]{Euler's Polyhedron Formula}
+    \begin{columns}[c]
+        \column{0.45\textwidth}
+        %
+        \begin{itemize}
+            \item Leonhard Euler was a Swiss mathematician who made enormous contributions to a wide range of fields in mathematics.
+            \item Euler discovered a relation between number of vertices, number of faces, and number of edges.
+        \end{itemize}
+        %
+        \begin{block}{Euler's Formula}
+             Let $V$ be the number of vertices, $E$ be the number of edges and $F$ be the number of faces of a polyhedon. Then
+             \[ V-E+F=2 \]
+        \end{block}
+        %***** 2nd column *****
+        \column{0.45\textwidth}    
+        %
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.6\textwidth]{pics/Leonhard_Euler.jpg}
+            \caption*{Leonhard Euler (1707-1783)}
+        \end{figure}
+        % \begin{figure}[H]
+        %     \centering
+        %     \includegraphics[width=0.35\textwidth]{pics/legendre.png}
+        % \end{figure}
+        % \begin{itemize}
+        %     \item Euler mentioned his result in a letter to Goldbach in 1750. However he did not give the first correct proof of his formula.
+        %     \item French mathematician Adrian Marie Legendre (1752-1833) was the first to prove using Spherical Geometry.
+        % \end{itemize}
+    \end{columns}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Euler's Polyhedron Formula (Cont'd)}
+    \textbf{Examples}:
+    %
+    \begin{columns}
+    %
+    \column{0.25\textwidth}
+    \begin{figure}[H]
+        \centering
+        \input{Tikz/cube}
+    \end{figure}
+    %
+    \begin{center}
+        Cube
+    \end{center}
+    %
+    \begin{align*}
+        & V=8,\; E=12,\; F=6
+        \\
+        &V-E+F = 2\ \checkmark
+    \end{align*}   
+    %
+    \column{0.33\textwidth}
+    \begin{figure}[H]
+        \centering
+        \input{Tikz/icos}
+    \end{figure}   
+    %
+    \begin{center}
+        Icosahedron 
+    \end{center}
+    %
+    %
+    \begin{align*}
+        & V=12,\; E=30,\; F=20
+        \\
+        &V-E+F = 2\ \checkmark
+    \end{align*}   
+    %
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Example (Does this shape exist?)}
+    \begin{example}
+        Do the following shapes exist?
+        \begin{enumerate}[(a)]
+            \item A polyhedron with $V=10$, $E=22$, and $F=14$
+            \item A polyhedron with $V= 14$, $E=21$, and $F= 10$
+        \end{enumerate}
+    \end{example}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Example (Euler's Formula)}
+    \begin{example}
+        A certain polyhedron has 16 vertices and 10 faces. Determine the number of edges on the polyhedron.
+    \end{example}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Types of Polyhedra}
+\begin{frame}[t]{Types of Polyhedra}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.22]{pics/types_polyhedra.png}
+    \end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Platonic Solids}
+\begin{frame}[t]{Platonic Solids}
+    %
+    \begin{itemize}
+        \item All faces are \textbf{regular} polygons of the same size and shape.
+        \item There are only 5 platonic solids (why? watch this video from \hyperlink{http://www.youtube.com/watch?v=gVzu1_12FUc}{\textcolor{blue}{\underline{Numberphile}}}).
+    \end{itemize}
+    %
+    \begin{figure}[H]
+        \centering
+        \input{Tikz/platonic_solids}
+    \end{figure}
+    %
+    \begin{itemize}
+        \item In this course, we skip platonic solids (except tetrahedron and cube).
+    \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Prism}
+\begin{frame}[t]{Prism}
+    \begin{itemize}
+        \item Have two faces which are congruent, parallel. These faces are called \textbf{bases}.
+        \item All the other faces are called \textbf{lateral faces}. 
+        \item Lateral faces can be either:
+        \begin{itemize}
+            \item parallelogram (oblique prism)
+            \item rectangle (right prism)
+        \end{itemize}
+    \end{itemize}
+    %
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.24]{pics/prism.png}
+    \end{figure}
+    %
+    \begin{itemize}
+        \item In this course, we only discuss about right prism.
+    \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Prism (Cont'd)}
+    \begin{itemize}
+        \item Some examples of right prisms:
+    \end{itemize}
+    %
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.25]{pics/other_prisms.png}
+    \end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Pyramid}
+\begin{frame}[t]{Pyramid}
+    \begin{itemize}
+        \item All faces except one intersect at a common vertex.
+        \item It has only one base.
+    \end{itemize}
+    %
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.26]{pics/pyramids.png}
+    \end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Volume and Surface Area}
+\begin{frame}[t]{Volume and Surface Area}
+    \begin{columns}[t]
+    \column{0.45\textwidth}
+    %
+    \boxed{\textbf{Surface Area (SA)}}
+    \begin{itemize}
+        \item The sum of the areas of all of the faces of a polyhedron.
+        \item Surface Area is denoted as SA.
+    \end{itemize}
+    %
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.17]{pics/def_surface_area.png}
+    \end{figure}
+    %
+    \column{0.45\textwidth}
+    %    
+    \boxed{\textbf{Volume ($V$)}}
+        \begin{itemize}
+            \item The amount of space inside of a shape.
+            \item Volume is measured by cubic units. 
+        \end{itemize}
+    %
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.17]{pics/def_volume.png}
+    \end{figure}
+    %
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Volume and SA of a Prism}
+\begin{frame}[t]{Volume and SA of a Prism}
+    %
+    \begin{columns}[t]
+    % SA
+    \column{0.45\textwidth}
+    \textbf{Surface Area (SA)}
+    \begin{itemize}
+        \item To find the SA of a prism, you just need to find the area of all faces and add them together.
+        \item In this course, we mainly focus on volume of the prism.
+    \end{itemize}
+    % Volume
+    \column{0.45\textwidth}
+    \textbf{Volume ($V$)}
+    \begin{block}{Formula}
+         \[ V = B\cdot h \]
+         where $B$ is the area of one base and $h$ is the distance between two bases.
+    \end{block}
+    \end{columns}
+    %
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.25]{pics/volume_of_prism.png}
+\end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Example (Prism)}
+    \begin{columns}
+        \column{0.45\textwidth}
+        \begin{example}
+            Find the volume of the prism on the right.
+        \end{example}
+        %
+        \column{0.45\textwidth}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.25]{pics/example_volume_prism.png}
+        \end{figure}
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Volume and SA of a Pyramid}
+\begin{frame}[t]{Volume and SA of a Pyramid}
+    %
+    \begin{columns}[t]
+    % SA
+    \column{0.45\textwidth}
+    \textbf{Surface Area (SA)}
+    \begin{itemize}
+        \item Similar to prism, to find SA of a pyramid, just add up the areas of all faces.
+        \item In this course, we will work on its volume.
+    \end{itemize}
+    % Volume
+    \column{0.45\textwidth}
+    \textbf{Volume ($V$)}
+    \begin{block}{Formula}
+         \[ V = \frac{B\cdot h}{3} \]
+         where $B$ is the area of a base and $h$ is the distance from the common vertex to base.
+    \end{block}
+    \end{columns}
+    %
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.22]{pics/volume_of_pyramid.png}
+\end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Example (Pyramid}
+    \begin{columns}[c]
+        \column{0.45\textwidth}
+        \begin{example}
+            Find the volume of the pyramid on the right.
+        \end{example}
+        %
+        \column{0.45\textwidth}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.25]{pics/example_volume_pyramid.png}
+        \end{figure}
+    \end{columns}    
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Volume and SA of a Rectangular Cube}
+\begin{frame}[t]{Volume and SA of a Rectangular Cube (Box)}
+    %
+    \begin{columns}[t]
+    % SA
+    \column{0.45\textwidth}
+    \textbf{Surface Area (SA)}
+    \begin{itemize}
+        \item SA can be found easily by opening the box and looking at each face.
+    \end{itemize}
+    %
+    \begin{block}{SA Formula}
+         \[ SA = 2\ell w+ 2\ell h+ 2wh \]
+    \end{block}
+    %
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.22]{pics/box_SA.png}
+    \end{figure}
+    % Volume
+    \column{0.45\textwidth}
+    \textbf{Volume ($V$)}
+    %
+    \begin{itemize}
+        \item We can easily find its volume since it is a prism.
+    \end{itemize}
+    %
+    \begin{block}{Volume Formula}
+         \[ V = \ell w h \]
+    \end{block}
+    %
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.29]{pics/box_volume.png}
+    \end{figure}
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Volume and SA of a Cube}
+\begin{frame}[t]{Volume and SA of a Cube}
+    %
+    \begin{columns}[t]
+    % SA
+    \column{0.45\textwidth}
+    \textbf{Surface Area (SA)}
+    \begin{itemize}
+        \item Cube is a rectangular box in which all sides are equal to $s$.
+    \end{itemize}
+    %
+    \begin{block}{SA Formula}
+         \[ SA = 6s^2\]
+    \end{block}
+    %
+    % Volume
+    \column{0.45\textwidth}
+    \textbf{Volume ($V$)}
+    %
+    \begin{itemize}
+        \item Similar to SA, use the box formula and replace all sides with $s$.
+    \end{itemize}
+    %
+    \begin{block}{Volume Formula}
+         \[ V = s^3 \]
+    \end{block}
+    %
+    \end{columns}
+    %
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.28]{pics/cube_volume.png}
+    \end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Example (Cube and Box)}
+    \begin{columns}[t]
+    %
+    \column{0.45\textwidth}
+    \begin{example}
+        Find the SA and volume of the shapes on the right.
+    \end{example}
+    %
+    \column{0.45\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.2]{pics/example_cube_box.png}
+    \end{figure}
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Non-Polyhedra Shapes}
+\begin{frame}[t]{Non-Polyhedra Shapes}
+    \begin{itemize}
+        \item We will discuss three shapes that are not polyhedra:
+        \begin{itemize}
+            \item Cylinder
+            \item Cone
+            \item Sphere
+        \end{itemize}
+    \end{itemize}
+    %
+    \begin{itemize}
+        \item Their SA is little bit complicated than polyhedra!
+        \item The volume of Cylinder and Cone is like Prim and Pyramid, respectively.
+        \item However, the volume of sphere is totally different.
+    \end{itemize}
+    %
+    \begin{figure}[H]
+        \centering
+        \input{Tikz/cylinder_cone_sphere}
+    \end{figure}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Volume and SA of a Cylinder (Right Cylinder)}
+\begin{frame}[t]{Volume and SA of a Cylinder}
+    \begin{columns}[t]
+    % SA
+    \column{0.45\textwidth}
+    \textbf{Surface Area (SA)}
+    \begin{itemize}
+        \item The bases of a cylinder are circles.
+        \item The area of a lateral face can be found by cutting the cylinder.
+    \end{itemize}
+    %
+    \begin{block}{SA Formula}
+         \[ SA = 2\pi r^2 + 2\pi rh\]
+    \end{block}
+    %
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.252]{pics/cylinder_SA.png}
+    \end{figure}
+    % Volume
+    \column{0.45\textwidth}
+    \textbf{Volume ($V$)}
+    %
+    \begin{itemize}
+        \item Similar to prism, the volume of cylinder is area of a base ($\pi r^2$) times $h$ (distance between two bases).
+    \end{itemize}
+    %
+    \begin{block}{Volume Formula}
+         \[ V = \pi r^2 h \]
+    \end{block}
+    %
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.27]{pics/cylinder_v.png}
+    \end{figure}
+    \end{columns}
+    %
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Example (Cylinder)}
+    \begin{columns}[t]
+        \column{0.45\textwidth}
+        \begin{example}
+            Find the surface area and volume of the following cylinder.
+        \end{example}
+        %
+        \column{0.45\textwidth}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.3]{pics/example_cylinder.png}
+        \end{figure}
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Volume and SA of a Cone}
+\begin{frame}[t]{Volume and SA of a Cone}
+    \begin{columns}[t]
+    % SA
+    \column{0.45\textwidth}
+    \textbf{Surface Area (SA)}
+    \begin{itemize}
+        \item The base of the cone is a circle.
+        \item If we cut the cone and open it, we can find its lateral face area.
+    \end{itemize}
+    %
+    \begin{block}{SA Formula}
+         \[ SA = \pi r^2 + \pi r \sqrt{r^2+h^2}\]
+    \end{block}
+    %
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.23]{pics/cone_SA.png}
+    \end{figure}
+    % Volume
+    \column{0.45\textwidth}
+    \textbf{Volume ($V$)}
+    %
+    \begin{itemize}
+        \item Like pyramid, the volume of cone is one third of the volume of the cylinder with
+        same height and radius.
+    \end{itemize}
+    %
+    \begin{block}{Volume Formula}
+         \[ V = \frac{\pi r^2 h}{3} \]
+    \end{block}
+    %
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.18]{pics/cone_v.png}
+    \end{figure}
+    \end{columns}
+    %
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Example (Cone)}
+    \begin{columns}[t]
+    \column{0.45\textwidth}
+        \begin{example}
+            Find the SA and volume of the following cone.
+        \end{example}
+    \column{0.45\textwidth}
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.25]{pics/example_cone.png}
+        \end{figure}
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Volume and SA of a Sphere}
+\begin{frame}[t]{Volume and SA of a Sphere}
+    \begin{columns}[t]
+    % SA
+    \column{0.5\textwidth}
+    \footnotesize{
+    \begin{itemize}
+        \item Archimedes was the first person who discovered the SA and volume of a sphere.
+        \item Fitted a cylinder around a sphere.
+        \item Cut horizontal slices through the cylinder.
+        \item Found the volume between cylinder and sphere.
+        \item Then he found the volume of sphere.
+        \item Similar technique used to find the SA.
+    \end{itemize}}
+    %
+    \begin{figure}[H]
+        \centering
+        \input{Tikz/sphere}
+    \end{figure}
+    \column{0.45\textwidth}
+    %
+    \begin{block}{SA and Volume Formula}
+         \begin{align*}
+             SA & = 4 \pi r^2
+             \\
+             V & = \frac{4\pi r^3}{3}
+         \end{align*}
+    \end{block}
+    %
+    \begin{figure}[H]
+        \centering
+        \input{Tikz/archimedes}
+    \end{figure}
+    \end{columns}
+    %
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Example (Sphere)}
+    \begin{columns}[t]
+    \column{0.45\textwidth}
+        \begin{example}
+            Find the surface area and volume of the golf ball on the right.
+        \end{example}
+        %
+    \column{0.45\textwidth}    
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.3]{pics/example_golf_ball.png}
+        \end{figure}
+    \end{columns}
+\end{frame}
+
+

@@ -1,0 +1,461 @@
+% PART 3 (SECTION 8.3)
+\part{Section 8.3}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{transitionframe}
+    \begin{center}
+    { 
+        \Huge \textcolor{white}{\textbf{Area and Perimeter}}
+        \\[-1em]
+        \noindent\textcolor{white}{\rule{12cm}{0.4pt}}
+        
+        %\large \textcolor{white}{Section 8.3}
+    }
+    \end{center}
+\end{transitionframe}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Outline}
+            \tableofcontents[part=3]
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Perimeter}
+\begin{frame}[t]{Perimeter}
+    \begin{columns}
+    %
+    \column{0.45\textwidth}
+    %
+    \begin{block}{Definition}
+        Perimeter, denoted $P$, is the distance around the outside of a shape.
+    \end{block}
+    %
+    \begin{itemize}
+        \item In other words, the sum of lengths of the sides of a shape.
+        \item The unit of the perimeter is the same as the unit of the length such as inches (in), feet (ft), meter (m), millimeter (mm), centimeter (cm) and so forth.
+    \end{itemize}
+    %
+    \column{0.45\textwidth}
+    \textbf{Example:}
+    \begin{figure}[H]
+        \centering
+        \input{Tikz/perimeter.tex}
+        \label{fig:perimeter}
+    \end{figure}
+    %
+    \[
+        P = 1+1+2+2+3+4 = 13\ \mathrm{in}
+    \]
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Example (Find the perimeter)}
+    \begin{example}
+        Find the perimeter of the following parallelogram.
+        %
+        \begin{figure}[H]
+            \centering
+            \includegraphics[scale=0.25]{pics/perimeter_1.png}
+        \end{figure}
+    \end{example}
+    %
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Area}
+\begin{frame}[t]{Area}
+    \begin{columns}[t]
+    %
+    \column{0.45\textwidth}
+    \begin{block}{Definition}
+        An area, denoted $A$, is the measure of region within the boundaries of a shape.
+    \end{block}
+    %
+    \begin{itemize}
+        \item In other words, area is the size of surface insides a shape.
+    \end{itemize}
+    %
+    \column{0.45\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{pics/area_def.png}
+    \end{figure}        
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{How to Measure the Area?}
+\begin{frame}{How to Measure the Area?}
+    \begin{itemize}
+        \item Area is basically the number of \textit{square units} that covers a shape.
+    \end{itemize}
+    %
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.3]{pics/square_units.png}
+    \end{figure}
+    %
+    \begin{itemize}
+        \item The area is measure in squared units like square inches ($\mathrm{in^2}$), squared feet ($\mathrm{ft^2}$), squared cm ($\mathrm{cm^2}$), and so on.
+        \item Using square units, we eventually develop a formula to calculate the area.
+    \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Area of a Rectangle}
+\begin{frame}[t]{Area of a Rectangle}
+    \begin{columns}[t]
+    \column{0.45\textwidth}
+    \begin{itemize}
+        \item To find the area of a rectangle, we will find it using the square units. 
+        \item As it is shown in Figure on the right, there is a relationship between the area of a rectangle, its length ($\ell$), and its width ($w$).
+    \end{itemize}
+    %
+    \begin{block}{Formula}
+        The area of a rectangle with length $\ell$ and width $w$ is equal to
+        \[ A = \ell\cdot w \]
+    \end{block}
+    %
+    \column{0.45\textwidth}
+    %
+    \begin{figure}[H]
+        \centering
+        \input{Tikz/proof_rectangle.tex}
+    \end{figure}
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Area of a Square}
+\begin{frame}[t]{Area of a Square}
+    \begin{columns}
+    \column{0.45\textwidth}
+    \begin{itemize}
+        \item A square is a special case of a rectangle in which both length and width are equal in length.
+        \item Let's say they both are equal to $s$.
+        \item Using the rectangle formula, one can easily find the area of a square.
+    \end{itemize}
+    %
+    \begin{block}{Formula}
+        If a side of square is $s$, then its area can be found as follow:
+        \[ A = s^2\]
+    \end{block}
+    %
+    \column{0.45\textwidth}
+    \begin{figure}[H]
+        \centering
+        \input{Tikz/square.tex}
+    \end{figure}    
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Example (Find Area and Perimeter)}
+    \begin{example}
+        Find the area and perimeter of each shape.
+        %
+        \begin{figure}[H]
+            \centering
+            \input{Tikz/example_5.tex}
+        \end{figure}
+    \end{example}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Area of a Parallelogram}
+\begin{frame}{Area of a Parallelogram}
+    \begin{columns}
+    %
+    \column{0.45\textwidth}
+    \begin{itemize}
+        \item Height of a parallelogram, $h$, is the distance between two parallel sides.
+        \item Those parallel sides are called bases and we showed them with $b$.
+        \item It can be proven the area of a parallelogram is height times its base.
+    \end{itemize}
+    %
+    \begin{block}{Formula}
+        If $h$ is height of the parallelogram and $b$ is the side which height is perpendicular to it, then the area of the parallelogram can be found as follow:
+        \[ A = b \cdot h\] 
+    \end{block}
+    %
+    \column{0.45\textwidth}
+    \begin{figure}[H]
+        \centering
+        \input{Tikz/area_parallelogram}
+    \end{figure}
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Area of a Triangle}
+\begin{frame}{Area of a Triangle}
+    \begin{columns}
+    \column{0.45\textwidth}
+        \begin{itemize}
+            \item Two triangle make a parallelogram. 
+            \item So the area of a triangle is half of a parallelogram with same base and height.
+        \end{itemize}
+        %
+        \begin{block}{Formula}
+            If $h$ is distance from one vertex to the side $b$ (called base), then the area of a triangle can be found using the following formula:
+            \[  A = \frac{b\cdot h}{2} \]
+        \end{block}
+        %
+        \column{0.45\textwidth}
+    \begin{figure}[H]
+        \centering
+        \input{Tikz/area_triangle}
+    \end{figure}        
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Area of a Triangle (Cont'd)}
+    \begin{itemize}
+        \item For right triangle, we can consider on leg as a height and the other leg as a base (Figure a).
+        \item In addition, one can draw a perpendicular line to the hypotenuse. In this case, the perpendicular line is our height and hypotenuse is our base (Figure b)
+    \end{itemize}
+    %
+    \begin{figure}[H]
+        \centering
+        \input{Tikz/area_right_triangle}
+    \end{figure} 
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Example (Find Area)}
+    \begin{example}
+        Find the area of each shape.
+        %
+        \begin{figure}[H]
+            \centering
+            \input{Tikz/example_6.tex}
+        \end{figure}
+    \end{example}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Area of a Trapezoid}
+\begin{frame}{Area of a Trapezoid}
+    \begin{columns}
+    \column{0.45\textwidth}
+        \begin{itemize}
+            \item In trapezoid, the two parallel sides are called bases. It is usually denoted as $b_1$ and $b_2$.
+            \item The distance between two bases is the height of the trapezoid, $h$.
+        \end{itemize}
+        %
+        \begin{block}{Formula}
+            The area of a trapezoid with bases $b_1$ and $b_2$ and height of $h$ can be found as follow:
+            \[ A = \frac{(b_1+b_2)\cdot h}{2}\]
+        \end{block}
+    \column{0.45\textwidth}
+        \begin{figure}[H]
+            \centering
+            \input{Tikz/area_trapezoid}
+        \end{figure}
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Example (Find the Area)}
+    \begin{example}
+        Find the area of a below trapezoid.
+        %
+        \begin{figure}[H]
+            \centering
+            \input{Tikz/example_7.tex}
+        \end{figure}
+    \end{example}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{More on Right Triangles}
+\subsection{Pythagorean Theorem}
+\begin{frame}[t]{Pythagorean Theorem}
+    \begin{columns}[t]
+    \column{0.45\textwidth}
+        \begin{itemize}
+            \item The Theorem of Pythagoras or Pythagorean theorem is a well-known theorem. 
+            \item The theorem makes reference to a right triangle.
+            \item As you might remember, The side opposite the right angle is the longest side and is called the hypotenuse.
+        \end{itemize}
+        %
+    \column{0.45\textwidth}
+        %
+        \begin{block}{Formula}
+            In a right triangle, the sum of the squares of the two right-angle sides (legs) will always be the same as the square of the hypotenuse. In symbol form:
+            \[a^2+b^2 = c^2\]
+        \end{block}
+        %
+        \begin{figure}[H]
+            \centering
+            \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+            \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1,scale=0.6]
+            \draw  [line width=1.5]  (276,25) -- (410,137) -- (276,137) -- cycle ;
+            \draw   (276,129) -- (284,129) -- (284,137) -- (276,137) -- cycle ;
+            % Text Node
+            \draw (228,79) node   {$a$};
+            % Text Node
+            \draw (330,154) node  {$b$};
+            % Text Node
+            \draw (350,59) node[right=0.1pt]   {$c\ \text{(hypotenuse)} \ $};
+            \end{tikzpicture}
+        \end{figure}
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Example (Find the missing side)}
+    \begin{example}
+        Find the missing side in each triangle.
+        %
+        \begin{figure}[H]
+            \centering
+            \input{Tikz/example_8.tex}
+        \end{figure}
+    \end{example}   
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Circles}
+\begin{frame}{Circles}
+    \begin{itemize}
+        \item A circle is a set of points that are the same distance from a fixed point.
+        \item The fixed point is called center and we show it with letter $O$.
+        \item A line segment from the center to a point on the circle is called radius denotes with $r$.
+    \end{itemize}
+    %
+    \begin{figure}[H]
+        \centering
+        \input{Tikz/circle}
+    \end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Circles (Cont'd)}
+    \begin{itemize}
+        \item The diameter, $d$, is a line segment passing though the center with endpoints on the circle.
+        \[          r = \frac{d}{2}   \]
+        \item Any other line segments with endpoints on the circle without passing though the center are called chords.
+    \end{itemize}
+    %
+    \begin{figure}[H]
+        \centering
+        \input{Tikz/diameter_chord}
+    \end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Number \texorpdfstring{$\pi$}{TEXT} }
+\begin{frame}{Number $\pi$}
+    %
+    \begin{itemize}
+        \item \textit{Archimedes} was a Greek mathematician, physicist, engineer, and astronomer.
+        \item He discovered that in any circle the ratio of circumference to diameter is always the same number $3.14159\cdots$
+        \item It has been represented by the Greek letter $\pi$ since the mid-18th century, though it is also sometimes spelled out as ``pi''.
+    \end{itemize}
+    %
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.27]{pics/circumference_to_diameter.png}
+    \end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Number $\pi$ (Cont'd)}
+    \begin{columns}
+    \column{0.45\textwidth}
+    \begin{itemize}
+        \item $\pi$ is a constant number.
+        \item It is a irrational number since we cannot express it as a fraction.
+        \item But its digits goes forever.
+        \item In most cases, we leave our answers in terms of $\pi$ unless the problem itself give us some approximation.
+    \end{itemize}
+    %
+    \column{0.45\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.3]{pics/pi_funny.jpg}
+    \end{figure}
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Circumference of a Circle}
+\begin{frame}[t]{Circumference of a Circle}
+    \begin{itemize}
+        \item Circumference is denoted as $C$.
+        \item We learned circumference divided by diameter is always equal to $\pi$.
+        \item If we multiply both sides of the equation by $2r$, we will get an equation for $C$.
+    \end{itemize}
+    %
+    \begin{columns}[t]
+    \column{0.45\textwidth}
+    \begin{block}{Circumference of a Circle}
+        The circumference of a circle, $C$, with radius $r$ is
+        \[ C = 2\pi r\]
+    \end{block}
+    %
+    \column{0.45\textwidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.13]{pics/wow.jpg}
+    \end{figure}
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Area of a Circle}
+\begin{frame}[t]{Area of a Circle}
+    %
+    \begin{columns}
+    \column{0.45\textwidth}
+    \begin{itemize}
+            \item \textit{Archimedes} also found the area of the circle by dividing circles into some sectors. 
+            \item He then argued the area of those slices is the same as a right triangle whose is $2\pi r$ and its height $r$.
+        \end{itemize}
+    %
+    \column{0.45\textwidth}
+    \begin{block}{Area of a Circle}
+        The area of a circle with radius $r$ is
+        \[ A = \pi r^2\]
+    \end{block}
+    %
+    \end{columns}
+    %
+    \begin{figure}
+        \centering
+        \includegraphics[scale=0.23]{pics/archimede_area.png}
+    \end{figure}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        SLIDE 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[t]{Example (Find Circumference and Area)}
+    \begin{example}
+        Find the circumference and area of a circle with diameter 12 cm.
+    \end{example}
+\end{frame}
