@@ -1,0 +1,17 @@
+\usetikzlibrary{quotes,angles}
+\begin{tikzpicture}[scale=1.5]
+  %
+  \coordinate (a) at (0,1);
+  \coordinate (o) at (0,0) node[below=1em] {$\angle \alpha + \angle \beta = 90^\circ$};
+  \coordinate (c) at (1,0);
+  \coordinate (d) at (0.75,0.75);
+  %
+  \draw[thick] (a) -- (o);
+  \draw[thick] (o) -- (c);
+  \draw[thick] (o) -- (d);
+  %
+  \draw pic["$\alpha$", thick, draw=red, <->, angle eccentricity=1.2, angle radius=0.75cm] {angle=c--o--d};
+   \draw pic["$\beta$", thick, draw=red, <->, angle eccentricity=1.4, angle radius=0.5cm] {angle=d--o--a};
+   %
+   \draw (o) -- (0,0.1) -- (0.1,0.1) -- (0.1,0);
+\end{tikzpicture}
